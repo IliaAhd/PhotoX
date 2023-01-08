@@ -8,5 +8,10 @@ navButton.addEventListener('click', function() {
     line1.classList.toggle('change');
     line2.classList.toggle('change');
     line3.classList.toggle('change');
-    navMenu.classList.toggle('bg-dark');
+
+    if(navMenu.classList.contains('.bg-dark')) {
+        navMenu.classList.remove('bg-dark');
+    } else {
+        navMenu.classList.add('bg-dark');
+    }
 });
