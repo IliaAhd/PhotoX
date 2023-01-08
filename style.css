@@ -50,3 +50,26 @@ header {
 .menu-item:hover {
     color: #70aed2;
 }
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.line1, .line2, .line3 {
+    width: 1.8rem;
+    height: 4px;
+    margin: 5px;
+    border-radius: 100vmax;
+}
+
+.change .line1 {
+    transform: translate(-10px, 9px) rotate(-45deg);
+}
+
+.change .line2 {
+    opacity: 0;
+}
+
+.change .line3 {
+    transform: translate(-10px, -9px) rotate(45deg);
+}
