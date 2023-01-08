@@ -35,3 +35,18 @@ header {
         opacity: 1;
     }
 }
+
+.nav-menu {
+    background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+}
+
+.menu-item {
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #eee;
+    transition: color .2s;
+}
+
+.menu-item:hover {
+    color: #70aed2;
+}
