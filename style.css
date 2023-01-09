@@ -81,3 +81,14 @@ header {
     padding-block: .1rem;
     background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7));
 }
+
+.mission {
+    background-color: #151f20;
+}
+
+.underline {
+    height: 1px;
+    width: 80%;
+    background-color: #eee;
+    border-radius: 100vmax;
+}
