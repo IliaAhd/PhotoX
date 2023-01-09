@@ -38,6 +38,8 @@ header {
 
 .nav-menu {
     background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .5));
+    padding-block: 2rem;
+    transition: all .7s;
 }
 
 .menu-item {
@@ -48,6 +50,10 @@ header {
 }
 
 .menu-item:hover {
+    color: #70aed2;
+}
+
+.nav-active {
     color: #70aed2;
 }
 
@@ -69,4 +75,9 @@ header {
 
 .change.line3 {
     transform: rotate(45deg) translate(-6.5px, -6px);
+}
+
+.costum-navbar {
+    padding-block: .1rem;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .7));
 }
