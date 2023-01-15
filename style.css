@@ -1,5 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
 }
 
 header {
@@ -123,4 +124,24 @@ header {
         transform: translateX(0);
         opacity: 1;
     }
+}
+
+.card-shadow {
+    box-shadow: 5px 8px 20px #444;
+}
+
+.heading {
+    position: absolute;
+    bottom: 0; right: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background-color: #222;
+    width: 70%;
+    cursor: pointer;
+    opacity: .7;
+    transition: all .5s;
+}
+
+.heading:hover {
+    opacity: 1;
 }
