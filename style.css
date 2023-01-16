@@ -152,3 +152,9 @@ header {
     background-color: #888;
     border-radius: 100vmax;
 }
+
+.gallery-list-item {
+    color: #777;
+    cursor: pointer;
+    user-select: none;
+}
