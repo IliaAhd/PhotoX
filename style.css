@@ -157,6 +157,15 @@ header {
     color: #777;
     cursor: pointer;
     user-select: none;
+    transition: all .4s;
+}
+
+.gallery-list-item:hover {
+    color: #111;
+}
+
+.active-item {
+    color: #70aed2;
 }
 
 .gap {

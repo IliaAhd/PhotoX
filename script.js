@@ -35,3 +35,50 @@ window.onscroll = function () {
     cameraImage.classList.remove("from-left");
   }
 };
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var galleryListItems = document.querySelectorAll('.gallery-list-item');
+  galleryListItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      var value = this.getAttribute('data-filter');
+      var filters = document.querySelectorAll('.filter');
+      filters.forEach(function(filter) {
+        if (value === 'all') {
+            filter.style.display = 'block';
+            setTimeout(() => {
+              filter.style.opacity = 1;
+              filter.style.transition = "all 1s";
+            }, 0);
+        } else {
+            if (!filter.classList.contains(value)) {
+                filter.style.opacity = 0;
+                filter.style.transition = "all 1s";
+                setTimeout(() => {
+                  filter.style.display = 'none';
+                  filter.style.transition = "all 1s";
+                }, 300);
+            } else {
+              filter.style.display = 'block';
+              setTimeout(() => {
+                filter.style.opacity = 1;
+                filter.style.transition = "all 1s";
+              }, 0);
+            }
+        }
+      });
+    });
+  });
+});
+
+// const galleryItems = document.querySelectorAll('.gallery-list-item');
+
+// for (const galleryItem of galleryItems) {
+//   galleryItem.addEventListener('click', function() {
+//     galleryItem[i].classList.add('active-item')
+//     console.log(galleryItem[i]);
+//   });
+// }
