@@ -158,3 +158,9 @@ header {
     cursor: pointer;
     user-select: none;
 }
+
+@media (max-width: 38rem) {
+    .gallery-list-item span {
+        display: none;
+    }
+}
