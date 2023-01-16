@@ -145,3 +145,10 @@ header {
 .heading:hover {
     opacity: 1;
 }
+
+.underline_dark {
+    height: 1px;
+    width: 80%;
+    background-color: #888;
+    border-radius: 100vmax;
+}
