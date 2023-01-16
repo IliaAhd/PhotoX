@@ -159,6 +159,10 @@ header {
     user-select: none;
 }
 
+.gap {
+    gap: 1rem;
+}
+
 @media (max-width: 38rem) {
     .gallery-list-item span {
         display: none;
