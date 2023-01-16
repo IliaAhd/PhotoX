@@ -74,11 +74,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// const galleryItems = document.querySelectorAll('.gallery-list-item');
+const galleryItems = document.querySelectorAll('.gallery-list-item');
 
-// for (const galleryItem of galleryItems) {
-//   galleryItem.addEventListener('click', function() {
-//     galleryItem[i].classList.add('active-item')
-//     console.log(galleryItem[i]);
-//   });
-// }
+for (let i = 0; i < galleryItems.length; i++) {
+  galleryItems[i].addEventListener('click', function(){
+    for (let i = 0; i < galleryItems.length; i++) {
+      galleryItems[i].classList.remove('active-item');;
+    }
+    galleryItems[i].classList.toggle('active-item');
+  })
+}
