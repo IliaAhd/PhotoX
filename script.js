@@ -36,10 +36,6 @@ window.onscroll = function () {
   }
 };
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
   var galleryListItems = document.querySelectorAll('.gallery-list-item');
   galleryListItems.forEach(function(item) {
@@ -79,7 +75,7 @@ const galleryItems = document.querySelectorAll('.gallery-list-item');
 for (let i = 0; i < galleryItems.length; i++) {
   galleryItems[i].addEventListener('click', function(){
     for (let i = 0; i < galleryItems.length; i++) {
-      galleryItems[i].classList.remove('active-item');;
+      galleryItems[i].classList.remove('active-item');
     }
     galleryItems[i].classList.toggle('active-item');
   })

@@ -177,3 +177,29 @@ header {
         display: none;
     }
 }
+
+.customers {
+    background-color: #151f20;
+}
+
+.customers img {
+    height: 100px;
+    width: 100px;
+}
+
+.carousel-control-prev {
+    left: -20%;
+}
+
+.carousel-control-next {
+    right: -20%;
+}
+
+@media (max-width: 767px) {
+    .carousel-control-prev {
+        left: -10%;
+    }
+    .carousel-control-next {
+        right: -10%;
+    }
+}
