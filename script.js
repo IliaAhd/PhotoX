@@ -7,6 +7,10 @@ const line3 = document.querySelector(".line3");
 const cameraImage = document.querySelector(".camera-img");
 const missionText = document.querySelector(".mission-text");
 
+const card1 = document.querySelector('.card-1');
+const card2 = document.querySelector('.card-2');
+const card3 = document.querySelector('.card-3');
+
 navButton.addEventListener("click", function () {
   line1.classList.toggle("change");
   line2.classList.toggle("change");
@@ -33,6 +37,19 @@ window.onscroll = function () {
   } else {
     missionText.classList.remove("from-right");
     cameraImage.classList.remove("from-left");
+  }
+
+  if (
+    document.body.scrollTop >= 5100 ||
+    document.documentElement.scrollTop >= 5100
+  ) {
+    card1.classList.add("moveFromLeft");
+    card2.classList.add("moveFromBottom");
+    card3.classList.add("moveFromRight");
+  } else {
+    card1.classList.remove("moveFromLeft");
+    card2.classList.remove("moveFromBottom");
+    card3.classList.remove("moveFromRight");
   }
 };
 
