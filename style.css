@@ -1,6 +1,5 @@
 body {
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
 }
 
 header {
@@ -98,14 +97,21 @@ header {
   border-radius: 100vmax;
 }
 
+.camera-img, .mission-text {
+    opacity: 0;
+    transition: all .3s;
+}
+
 .from-left {
   animation-name: fromLeft;
   animation-duration: 3s;
+  opacity: 1;
 }
 
 .from-right {
   animation-name: fromRight;
   animation-duration: 3s;
+  opacity: 1;
 }
 
 @keyframes fromLeft {
@@ -193,19 +199,19 @@ header {
 }
 
 .carousel-control-prev {
-  left: -20%;
+  left: -6rem;
 }
 
 .carousel-control-next {
-  right: -20%;
+  right: -6rem;
 }
 
 @media (max-width: 767px) {
   .carousel-control-prev {
-    left: -10%;
+    left: 0;
   }
   .carousel-control-next {
-    right: -10%;
+    right: 0;
   }
 }
 

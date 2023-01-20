@@ -29,14 +29,16 @@ window.onscroll = function () {
   }
 
   if (
-    document.body.scrollTop >= 650 ||
-    document.documentElement.scrollTop >= 650
+    document.body.scrollTop >= 800 ||
+    document.documentElement.scrollTop >= 800
   ) {
     missionText.classList.add("from-right");
     cameraImage.classList.add("from-left");
+    document.body.style.overflowX = "hidden";
   } else {
     missionText.classList.remove("from-right");
     cameraImage.classList.remove("from-left");
+    document.body.style.overflowX = "auto";
   }
 
   if (
@@ -46,10 +48,12 @@ window.onscroll = function () {
     card1.classList.add("moveFromLeft");
     card2.classList.add("moveFromBottom");
     card3.classList.add("moveFromRight");
+    document.body.style.overflowX = "hidden";
   } else {
     card1.classList.remove("moveFromLeft");
     card2.classList.remove("moveFromBottom");
     card3.classList.remove("moveFromRight");
+    document.body.style.overflowX = "auto";
   }
 };
 
