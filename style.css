@@ -1,3 +1,25 @@
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #70aed2;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ccc;
+}
+
+@supports (scrollbar-color: #444 #ccc) {
+  * {
+    scrollbar-color: #444 #ccc;
+  }
+}
+
 * {
     scroll-behavior: smooth;
 }
@@ -318,7 +340,7 @@ header {
     border-radius: 0;
     color: #f9793d;
     transition: all .8s;
-}
+  }
 
 .input:focus {
     background: transparent;
@@ -332,9 +354,9 @@ header {
 }
 
 .line {
-    background-color: red;
-    width: 0;
-    height: 2px;
+  background-color: red;
+  width: 0;
+  height: 2px;
     position: absolute;
     top: 36px;
     transition: all .8s;
@@ -353,7 +375,7 @@ header {
 .submit-button:hover {
     background-color: #f9793d;
     transform: translateY(-3px);
-}
+  }
 
 .label {
     color: #777;
@@ -362,21 +384,21 @@ header {
     margin-left: 4px;
     font-size: 13px;
     transition: all .3s;
-}
-
-.input:placeholder-shown ~ .label {
+  }
+  
+  .input:placeholder-shown ~ .label {
     transform: translate(5px, 30px);
     opacity: 0;
     visibility: hidden;
-}
-
+  }
+  
 @media (max-width: 62rem) {
     .contact {
         background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, .95));
-    }
+      }
 
     .contact-form {
         width: 80%;
         margin: auto;
-    }
+      }
 }
