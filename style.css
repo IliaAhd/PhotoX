@@ -381,10 +381,13 @@ header {
 
 .label {
   color: #777;
+  font-size: 1.2rem;
+}
+
+.label-anim {
   display: block;
   margin-top: -70px;
   margin-left: 4px;
-  font-size: 13px;
   transition: all 0.3s;
 }
 
@@ -392,6 +395,18 @@ header {
   transform: translate(5px, 30px);
   opacity: 0;
   visibility: hidden;
+}
+
+.text-area {
+  color: #f9793d;
+  background: transparent;
+  resize: none;
+  transition: all .4s;
+}
+
+.text-area:focus {
+  color: #fff;
+  background: transparent;
 }
 
 @media (max-width: 62rem) {
