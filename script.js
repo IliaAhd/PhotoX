@@ -7,9 +7,9 @@ const line3 = document.querySelector(".line3");
 const cameraImage = document.querySelector(".camera-img");
 const missionText = document.querySelector(".mission-text");
 
-const card1 = document.querySelector('.card-1');
-const card2 = document.querySelector('.card-2');
-const card3 = document.querySelector('.card-3');
+const card1 = document.querySelector(".card-1");
+const card2 = document.querySelector(".card-2");
+const card3 = document.querySelector(".card-3");
 
 navButton.addEventListener("click", function () {
   line1.classList.toggle("change");
@@ -57,47 +57,47 @@ window.onscroll = function () {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function() {
-  var galleryListItems = document.querySelectorAll('.gallery-list-item');
-  galleryListItems.forEach(function(item) {
-    item.addEventListener('click', function() {
-      var value = this.getAttribute('data-filter');
-      var filters = document.querySelectorAll('.filter');
-      filters.forEach(function(filter) {
-        if (value === 'all') {
-            filter.style.display = 'block';
+document.addEventListener("DOMContentLoaded", function () {
+  var galleryListItems = document.querySelectorAll(".gallery-list-item");
+  galleryListItems.forEach(function (item) {
+    item.addEventListener("click", function () {
+      var value = this.getAttribute("data-filter");
+      var filters = document.querySelectorAll(".filter");
+      filters.forEach(function (filter) {
+        if (value === "all") {
+          filter.style.display = "block";
+          setTimeout(() => {
+            filter.style.opacity = 1;
+            filter.style.transition = "all 1s";
+          }, 0);
+        } else {
+          if (!filter.classList.contains(value)) {
+            filter.style.opacity = 0;
+            filter.style.transition = "all 1s";
+            setTimeout(() => {
+              filter.style.display = "none";
+              filter.style.transition = "all 1s";
+            }, 300);
+          } else {
+            filter.style.display = "block";
             setTimeout(() => {
               filter.style.opacity = 1;
               filter.style.transition = "all 1s";
             }, 0);
-        } else {
-            if (!filter.classList.contains(value)) {
-                filter.style.opacity = 0;
-                filter.style.transition = "all 1s";
-                setTimeout(() => {
-                  filter.style.display = 'none';
-                  filter.style.transition = "all 1s";
-                }, 300);
-            } else {
-              filter.style.display = 'block';
-              setTimeout(() => {
-                filter.style.opacity = 1;
-                filter.style.transition = "all 1s";
-              }, 0);
-            }
+          }
         }
       });
     });
   });
 });
 
-const galleryItems = document.querySelectorAll('.gallery-list-item');
+const galleryItems = document.querySelectorAll(".gallery-list-item");
 
 for (let i = 0; i < galleryItems.length; i++) {
-  galleryItems[i].addEventListener('click', function(){
+  galleryItems[i].addEventListener("click", function () {
     for (let i = 0; i < galleryItems.length; i++) {
-      galleryItems[i].classList.remove('active-item');
+      galleryItems[i].classList.remove("active-item");
     }
-    galleryItems[i].classList.toggle('active-item');
-  })
+    galleryItems[i].classList.toggle("active-item");
+  });
 }

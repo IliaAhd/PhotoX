@@ -21,7 +21,7 @@
 }
 
 * {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -123,9 +123,10 @@ header {
   border-radius: 100vmax;
 }
 
-.camera-img, .mission-text {
-    opacity: 0;
-    transition: all .3s;
+.camera-img,
+.mission-text {
+  opacity: 0;
+  transition: all 0.3s;
 }
 
 .from-left {
@@ -326,79 +327,95 @@ header {
   background: linear-gradient(
       105deg,
       rgba(21, 31, 32, 1) 0%,
-      rgba(21, 31, 32, .7) 50%,
+      rgba(21, 31, 32, 0.7) 50%,
       transparent 50%
     ),
     url(images/form-img.jpeg) center center no-repeat;
   background-size: cover;
+  height: 100vh;
 }
 
 .input {
-    background: transparent;
-    border-color: transparent;
-    border-bottom: 2px solid #ccc;
-    border-radius: 0;
-    color: #f9793d;
-    transition: all .8s;
-  }
+  background: transparent;
+  border-color: transparent;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  color: #f9793d;
+  transition: all 0.8s;
+}
 
 .input:focus {
-    background: transparent;
-    border-color: transparent;
-    box-shadow: none;
-    color: #fff;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  color: #fff;
 }
 
 .input-effect {
-    position: relative;
+  position: relative;
 }
 
 .line {
   background-color: red;
   width: 0;
   height: 2px;
-    position: absolute;
-    top: 36px;
-    transition: all .8s;
+  position: absolute;
+  top: 36px;
+  transition: all 0.8s;
 }
 
 .input:focus ~ .line {
-    width: 100%;
+  width: 100%;
 }
 
 .submit-button {
-    background-color: #f5593d;
-    color: #eee;
-    transition: all .3s;
+  background-color: #f5593d;
+  color: #eee;
+  transition: all 0.3s;
 }
 
 .submit-button:hover {
-    background-color: #f9793d;
-    transform: translateY(-3px);
-  }
+  background-color: #f9793d;
+  transform: translateY(-3px);
+}
 
 .label {
-    color: #777;
-    display: block;
-    margin-top: -70px;
-    margin-left: 4px;
-    font-size: 13px;
-    transition: all .3s;
-  }
-  
-  .input:placeholder-shown ~ .label {
-    transform: translate(5px, 30px);
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-@media (max-width: 62rem) {
-    .contact {
-        background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, .95));
-      }
+  color: #777;
+  display: block;
+  margin-top: -70px;
+  margin-left: 4px;
+  font-size: 13px;
+  transition: all 0.3s;
+}
 
-    .contact-form {
-        width: 80%;
-        margin: auto;
-      }
+.input:placeholder-shown ~ .label {
+  transform: translate(5px, 30px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 62rem) {
+  .contact {
+    background: linear-gradient(rgba(21, 31, 32, 1), rgba(21, 31, 32, 0.95));
+  }
+
+  .contact-form {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.footer-link {
+  color: #eee;
+  font-size: 13px;
+  transition: all 0.3s;
+}
+
+.footer-link:hover {
+  color: #70aed2;
+  text-decoration: none;
+}
+
+.insta-icon {
+  color: #d6249f;
 }
