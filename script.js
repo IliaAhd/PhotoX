@@ -42,8 +42,8 @@ window.onscroll = function () {
   }
 
   if (
-    document.body.scrollTop >= 5100 ||
-    document.documentElement.scrollTop >= 5100
+    document.body.scrollTop >= 3400 ||
+    document.documentElement.scrollTop >= 3400
   ) {
     card1.classList.add("moveFromLeft");
     card2.classList.add("moveFromBottom");
@@ -55,6 +55,7 @@ window.onscroll = function () {
     card3.classList.remove("moveFromRight");
     document.body.style.overflowX = "auto";
   }
+  console.log(scrollY);
 };
 
 document.addEventListener("DOMContentLoaded", function () {
