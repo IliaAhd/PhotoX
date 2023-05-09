@@ -32,14 +32,14 @@ navButton.addEventListener("click", function () {
 });
 
 // Active nav item
-for (let i = 0; i < navItems.length; i++) {
-  navItems[i].addEventListener("click", function () {
-    for (let i = 0; i < navItems.length; i++) {
-      navItems[i].classList.remove("nav-active");
-    }
-    navItems[i].classList.toggle("nav-active");
-  });
-}
+// for (let i = 0; i < navItems.length; i++) {
+//   navItems[i].addEventListener("click", function () {
+//     for (let i = 0; i < navItems.length; i++) {
+//       navItems[i].classList.remove("nav-active");
+//     }
+//     navItems[i].classList.toggle("nav-active");
+//   });
+// }
 
 // Active gallery list item
 for (let i = 0; i < galleryItems.length; i++) {
@@ -87,7 +87,6 @@ MissionObs.observe(missionSection);
 // Pricing card appear
 const cardAppaer = function (entries) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) {
     card1.classList.remove("moveFromLeft");
@@ -104,122 +103,15 @@ const cardAppaer = function (entries) {
 const pricingObs = new IntersectionObserver(cardAppaer, observerOption);
 pricingObs.observe(pricingSection);
 
-// window.onscroll = function () {
+const sections = document.querySelectorAll("section");
 
-//   if (
-//     document.body.scrollTop >= 600 ||
-//     document.documentElement.scrollTop >= 600
-//   ) {
-//     document.querySelector(".nav-zero").classList.remove("nav-active");
-//   } else if (
-//     document.body.scrollTop <= 600 ||
-//     document.documentElement.scrollTop <= 600
-//   ) {
-//     document.querySelector(".nav-zero").classList.add("nav-active");
-//   }
-
-//   if (
-//     (600 <= document.body.scrollTop && document.body.scrollTop <= 1600) ||
-//     (600 <= document.documentElement.scrollTop &&
-//       document.documentElement.scrollTop <= 1600)
-//   ) {
-//     document.querySelector(".nav-one").classList.add("nav-active");
-//   } else if (
-//     (600 >= document.body.scrollTop && document.body.scrollTop >= 1600) ||
-//     600 >= document.documentElement.scrollTop ||
-//     document.documentElement.scrollTop >= 1600
-//   ) {
-//     document.querySelector(".nav-one").classList.remove("nav-active");
-//   }
-
-//   if (
-//     (1600 <= document.body.scrollTop && document.body.scrollTop <= 2700) ||
-//     (1600 <= document.documentElement.scrollTop &&
-//       document.documentElement.scrollTop <= 2700)
-//   ) {
-//     document.querySelector(".nav-three").classList.add("nav-active");
-//   } else if (
-//     (1600 >= document.body.scrollTop && document.body.scrollTop >= 2700) ||
-//     1600 >= document.documentElement.scrollTop ||
-//     document.documentElement.scrollTop >= 2700
-//   ) {
-//     document.querySelector(".nav-three").classList.remove("nav-active");
-//   }
-
-//   if (
-//     (2700 <= document.body.scrollTop && document.body.scrollTop <= 3500) ||
-//     (2700 <= document.documentElement.scrollTop &&
-//       document.documentElement.scrollTop <= 3500)
-//   ) {
-//     document.querySelector(".nav-four").classList.add("nav-active");
-//   } else if (
-//     (2700 >= document.body.scrollTop && document.body.scrollTop >= 3500) ||
-//     2700 >= document.documentElement.scrollTop ||
-//     document.documentElement.scrollTop >= 3500
-//   ) {
-//     document.querySelector(".nav-four").classList.remove("nav-active");
-//   }
-
-//   if (
-//     (3500 <= document.body.scrollTop && document.body.scrollTop <= 4300) ||
-//     (3500 <= document.documentElement.scrollTop &&
-//       document.documentElement.scrollTop <= 4300)
-//   ) {
-//     document.querySelector(".nav-five").classList.add("nav-active");
-//   } else if (
-//     (3500 >= document.body.scrollTop && document.body.scrollTop >= 4300) ||
-//     3500 >= document.documentElement.scrollTop ||
-//     document.documentElement.scrollTop >= 4300
-//   ) {
-//     document.querySelector(".nav-five").classList.remove("nav-active");
-//   }
-
-//   if (
-//     (4300 <= document.body.scrollTop && document.body.scrollTop <= 5700) ||
-//     (4300 <= document.documentElement.scrollTop &&
-//       document.documentElement.scrollTop <= 5700)
-//   ) {
-//     document.querySelector(".nav-six").classList.add("nav-active");
-//   } else if (
-//     (4300 >= document.body.scrollTop && document.body.scrollTop >= 5700) ||
-//     4300 >= document.documentElement.scrollTop ||
-//     document.documentElement.scrollTop >= 5700
-//   ) {
-//     document.querySelector(".nav-six").classList.remove("nav-active");
-//   }
-
-//   if (
-//     document.body.scrollTop >= 5700 ||
-//     document.documentElement.scrollTop >= 5700
-//   ) {
-//     document.querySelector(".nav-seven").classList.add("nav-active");
-//   } else if (
-//     document.body.scrollTop <= 5700 ||
-//     document.documentElement.scrollTop <= 5700
-//   ) {
-//     document.querySelector(".nav-seven").classList.remove("nav-active");
-//   }
-
-//   if (
-//     document.body.scrollTop >= 5200 ||
-//     document.documentElement.scrollTop >= 5200
-//   ) {
-//     for (let i = 0; i < galleryItems.length; i++) {
-//       for (let i = 0; i < galleryItems.length; i++) {
-//         galleryItems[i].classList.remove("active-item");
-//       }
-//     }
-//     document.querySelector(".gallery-list-item").classList.add("active-item");
-
-//     const filter = document.querySelectorAll(".filter");
-
-//     for (let i = 0; i < filter.length; i++) {
-//       filter[i].style.display = "block";
-//       filter[i].style.opacity = "1";
-//     }
-//   }
-//   console.log(scrollY);
+// Show Active nav item
+// const activeItem = function (entries) {
+//   const [entry] = entries;
+//   navItems.forEach((item) => item.classList.remove("nav-active"));
 // };
+// const itemObs = new IntersectionObserver(activeItem, observerOption);
+// sections.forEach((section) => itemObs.observe(section));
 
 // Gallery filter
 document.addEventListener("DOMContentLoaded", function () {
